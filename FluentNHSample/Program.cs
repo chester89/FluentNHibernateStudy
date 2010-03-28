@@ -68,7 +68,6 @@ namespace FluentNHSample {
         }
 
         private static ISessionFactory CreateSessionFactory() {
-            //ConventionBuilder.Id.Always(x => x.Column("Id"));
             Console.WriteLine("Building session factory");
             return Fluently.Configure()
                    .Database(MsSqlConfiguration.MsSql2008.ConnectionString(c => c.FromConnectionStringWithKey("Database"))).

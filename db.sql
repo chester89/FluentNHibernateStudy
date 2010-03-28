@@ -1,3 +1,6 @@
+if exists(select * from sys.databases where name = 'FluentNH')
+	drop database FluentNH
+
 create database FluentNH
 go
 use FluentNH
